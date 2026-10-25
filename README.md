@@ -25,9 +25,31 @@ Both babies are always shown **very small** (teacup size) next to normal furnitu
 
 Lesson for kids: play gently, and say sorry when you make a mistake.
 
+## Episode 1 v2 — HD sound + more fun (9:16, ~70s)
+
+`output/tiny_babies_broke_everything_v2_HD.mp4` — built by `scripts/build_v2.py`.
+
+What's new:
+- **Cold-open hook**: Mama's shocked face + "Uh-oh! Who broke Mama's vase?!" then a record scratch
+- **Rewind effect**: VHS-style rewind with whoosh sounds and "Let's rewind and find out!"
+- **Character intro** with pop-up name tags: "Meet Pinku... and Goldy!"
+- **Narrator** for small kids: counting "1, 2, 3... KICK!", "Pillow fight! Boing, boing!", "Will it fall?"
+- **New scene**: crayon drawings on the wall
+- **New ear scene**: Mama lifts both babies up by their ears — "You are very bad babies!"
+- **Lesson + interactive ending**: "Always say sorry!", "Who was the naughty one? Pinku or Goldy? Tell us in the comments!"
+
+HD sound:
+- 48 kHz stereo, AAC 320 kb/s, two-pass loudness to -14 LUFS (YouTube/TikTok standard), peaks below -1 dBTP
+- Clip audio cleaned (rumble high-pass, light de-noise, presence EQ); narrator compressed for clear words
+- Original music (`scripts/music.py`): happy ukulele + glockenspiel for play, sneaky pizzicato when Mama
+  arrives, sweet lullaby for the hug — automatically ducked under every voice
+- Sound effects: record scratch, rewind whooshes, name-tag pops, ending ding
+
 ## Files
 
 - `keyframes/scene1-6.jpg` — still frame each scene was animated from
 - `clips/scene1-6.mp4` — raw animated clips with sound
 - `output/tiny_babies_broke_everything_9x16.mp4` — final video with hooks and captions
-- `scripts/assemble.sh` — rebuilds the final video from `clips/` (needs ffmpeg)
+- `scripts/assemble.sh` — rebuilds the v1 video from `clips/` (needs ffmpeg)
+- `scripts/build_v2.py` + `scripts/music.py` — rebuild v2 with the full HD audio mix (needs ffmpeg + numpy)
+- `audio/narrator/` — narrator voice lines (48 kHz WAV)
